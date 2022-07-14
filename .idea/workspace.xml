@@ -57,8 +57,10 @@
   </component>
   <component name="RunManager">
     <configuration name="MeterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-17.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.root.meter.MeterApplication" />
-      <module name="smart-meter" />
+      <module name="meter" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.root.meter.*" />
