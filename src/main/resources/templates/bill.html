@@ -1,85 +1,203 @@
+<!-- model to this page:
+        userId, amount, stripePublicKey, currency
+-->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{https://unpkg.com/aos@next/dist/aos.css}">
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}">
-    <title>Payment</title>
-    <link rel='icon' type="text/css" media="all" href="images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>bill</title>
+    <link rel='icon' href="images/icon.png">
+    <style>
+
+
+.invoice-box
+{
+    max-width: 800px;
+    margin: auto;
+    padding: 30px ;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 630px;
+}
+.invoice-box table
+{
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+}
+.invoice-box table td
+{
+    padding: 5px;
+    vertical-align: top;
+}
+.invoice-box table tr td:nth-child(2)
+{
+    text-align: right;
+}
+.invoice-box table tr.top table td
+{
+    padding-bottom: 20px;
+}
+.invoice-box table tr.heading td
+{
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+.invoice-box table tr.details td
+{
+    padding-bottom: 20px;
+}
+.invoice-box table tr.details td
+{
+    border-bottom: 1px solid #eee;
+}
+@media only screen and (max-width:600px)
+{
+    .invoice-box table tr.top table td
+    {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .invoice-box .hero-btn
+    {
+        display: block;
+        text-align: center;
+    }
+}
+    </style>
 </head>
-<body class="four">
-<div class="invoice-box">
-    <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>
-                            <h4>Electricity Bill</h4>
-                        </td>
-                        <td>
-                            El Sewedy Electric <br>
-                            E-mail: email@gmail.com<br>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+<body >
+<!--------------------------------------nav-bar------------------------------------------------->
+<nav>
+    <div class="container">
+        <div class="logo">
+            <img src="images/Blue_logo.png" alt="logoo"/>
+            <br>
+            <br>
+            <h4><font color="#64bcf4">Next Generation Smart Grid Meter (NGSM)</font></h4>
+        </div>
 
-        <tr class="heading">
-            <td>Payment Method</td>
-            <td>Payment Currency</td>
-        </tr>
-        <tr class="details">
-            <td>Pay Online</td>
-            <td>EGP</td>
-        </tr>
-        <tr class="heading">
-            <td>Data</td>
-            <td>Details</td>
-        </tr>
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="/index" >Home</a>
+                </li>
+                <li>
+                    <a href="/me" >My Profile</a>
+                </li>
+                <li><font color="#64bcf4"></font>
+                    <a href="/me/chart" >View Consumptions</a></font>
+                </li>
+                <li>
+                    <div id="logoutDiv">
+                        <form action="#" th:action="@{/logout}"method="POST">
+                            <button type="submit" class="btn btn-secondary float-right" id="logout-btn">Logout</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-        <tr class="item">
-            <td>Your Name : </td>
-            <td scope="row" th:text="${bill.users.name}">Example Note Title</td>
-        </tr>
-        <tr class="item">
-            <td>E-mail : </td>
-            <td  th:text="${bill.users.email}">design</td>
-        </tr>
-        <tr class="item">
-            <td>State : </td>
-            <td  th:text="${bill.users.state}">design</td>
-        </tr>
-        <tr class="item">
-            <td>Phone number : </td>
-            <td th:text="${bill.users.phone}">Example Note Description</td>
-        </tr>
-        <tr class="item">
-            <td>Address : </td>
-            <td th:text="${bill.users.address}">Example Note Description</td>
-        </tr>
-        <tr class="item">
-            <td>Energy consumed : </td>
-            <td scope="row" th:text="${bill.energy}">Example Note Title</td>
-        </tr>
-        <tr class="item">
-            <td>Total amount of money : </td>
-            <td scope="row" th:text="${bill.amount}">Example Note Title</td>
-        </tr>
-        <tr class="item">
-            <td>Last Payment Date : </td>
-            <td  th:text="${bill.lastPaymentDate}">design</td>
-        </tr>
-        <br>
-    </table>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+        </div>
+    </div>
+</nav>
+<!-------------------------------body----------------------------------------------------->
+
+<div>
     <br>
+    <center>
+        <h2><font color="64bcf4">Your Bill for this month</font></h2>
+    </center>
+    <div class="invoice-box">
+        <center>
+            <table cellpadding="0">
+                <tr class="top">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h4>Electricity Bill</h4>
+                                </td>
+                                <td>
+                                    El Sewedy Electric <br>
+                                    E-mail: email@gmail.com<br>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
+                <tr class="heading">
+                    <td>Payment Method</td>
+                    <td>Payment Currency</td>
+                </tr>
+                <tr class="details">
+                    <td>Pay Online</td>
+                    <td>EGP</td>
+                </tr>
+                <tr class="heading">
+                    <td>Data</td>
+                    <td>Details</td>
+                </tr>
+
+                <tr class="item">
+                    <td>Your Name : </td>
+                    <td scope="row" th:text="${bill.users.name}">iskra</td>
+                </tr>
+                <tr class="item">
+                    <td>E-mail : </td>
+                    <td  th:text="${bill.users.email}">iskra@gmail.com</td>
+                </tr>
+                <tr class="item">
+                    <td>State : </td>
+                    <td  th:text="${bill.users.state}">Texas</td>
+                </tr>
+                <tr class="item">
+                    <td>Phone number : </td>
+                    <td th:text="${bill.users.phone}">01098765432</td>
+                </tr>
+                <tr class="item">
+                    <td>Address : </td>
+                    <td th:text="${bill.users.address}">123-texas</td>
+                </tr>
+
+                <tr class="item">
+                    <td>Total amount of money : </td>
+                    <td scope="row" th:text="${bill.amount}">463100.0</td>
+                </tr>
+                <tr class="item">
+                    <td>Last Payment Date :  </td>
+                    <td cope="row"  th:unless ="${bill.lastPaymentDate} == null"  th:text="${bill.lastPaymentDate}">2022-06-22</td>
+                </tr>
+                <br>
+            </table>
+        </center>
+    </div>
+</div>
+<center>
     <form action='/charge' method='POST' id='checkout-form'>
-        -       <input type='hidden' th:value='${amount}' name='amount' />
+        <input type='hidden' th:value='${amount}' name='amount' />
         <input type='hidden' th:value='${userId}' name='userId' />
-        <label>Price:<span th:text='${amount/100}' /></label>
+        <label><span th:text='${amount/100}' /></label>
+
         <!-- NOTE: data-key/data-amount/data-currency will be rendered by Thymeleaf -->
         <script
                 src='https://checkout.stripe.com/checkout.js'
@@ -95,63 +213,102 @@
                 data-zip-code='false'>
         </script>
     </form>
+</center>
+<br><br>
+<!--footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="grid-4">
+            <div class="grid-4-col footer-about">
+                <h3 class="title-sm">About</h3>
+                <p class="text">
+                    Our beginnings as a manufacturer of electrical components in Egypt 80 years ago
+                </p>
+            </div>
 
-</div>
-<!-------------------------------------------------------------------------
-    <div class="billing">
-        <h2><font color="06113C">Your bill</font></h2>
-        <hr>
-        <p>
-            User_Id : <span id="user1"></span><br>
-            <br>
-            Username : <span id="user2"></span><br>
-            <br>
-            User_Email : <span id="user3"></span><br>
-            <br>
-            User_State : <span id="user4"></span><br>
-            <br>
-            User_Phone : <span id="user5"></span><br>
-            <br>
-            User_Address : <span id="user6"></span><br>
-            <br>
-            Energy : <span id="energy"></span><br>
-            <br>
-            Amount : <span id="amount"></span><br>
-            <br>
-            Last Payment Date : <span id="paydate"></span><br>
-            <br>
-        </p>
-        <br>
-        <input type="button" class="hero-btn" value="Checkout">
-        <br>
-        <br>
+            <div class="grid-4-col footer-links">
+                <h3 class="title-sm">Links</h3>
+                <ul>
+                    <li>
+                        <a href="#services">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid-4-col footer-links">
+                <h3 class="title-sm">Services</h3>
+                <ul>
+                    <li>
+                        <a href="#">Web Development</a>
+                    </li>
+                    <li>
+                        <a href="#">Mobile Development</a>
+                    </li>
+                    <li>
+                        <a href="#">Machine Learning</a>
+                    </li>
+                    <li>
+                        <a href="#">Embedded Linux</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid-4-col footer-newstletter">
+                <h3 class="title-sm">Contact Us</h3>
+
+                <div class="footer-input-wrap">
+                    <input type="email" class="footer-input" placeholder="Email" />
+                    <a href="#" class="input-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="copyright">
+                <p class="text">
+                    Copyright&copy;2020 All rights reserved | Made by
+                    <span>/ root</span>
+                </p>
+            </div>
+
+            <div class="followme-wrap">
+                <div class="followme">
+                    <h3>Follow Us</h3>
+                    <span class="footer-line"></span>
+                    <div class="social-media">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="back-btn-wrap">
+                    <a href="#" class="back-btn">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+</footer>
+<!--end-of-footer-->
 
-    <script>
-        const api_url= 'https://rooot.azurewebsites.net/generate/Bill?userId=1';
-        async function getdata(){
-            const response = await fetch(api_url);
-            const data = await response.json();
-            const { users, id, name, energy, amount, lastPaymentDate } = data;
-            document.getElementById('user1').textContent = users.id;
-            document.getElementById('user2').textContent = users.name;
-            document.getElementById('user3').textContent = users.email;
-            document.getElementById('user4').textContent = users.state;
-            document.getElementById('user5').textContent = users.phone;
-            document.getElementById('user6').textContent = users.address;
-            document.getElementById('energy').textContent = energy;
-            document.getElementById('amount').textContent = amount;
-            document.getElementById('paydate').textContent = lastPaymentDate;
-
-            console.log(users);
-            console.log(id);
-            console.log(name);
-            console.log(energy);
-            console.log(amount);
-            console.log(lastPaymentDate);
-        }
-        getdata();
-    </script>
--->
 </body>
 </html>
