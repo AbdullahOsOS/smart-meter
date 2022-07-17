@@ -34,12 +34,12 @@ public class MeterApi {
         return ResponseEntity.ok(meterService.toDto(meter));
     }
     //gsoap
-    @GetMapping("/getFromMeter")
+    @GetMapping("/appliance")
     public Mono<String> getFromMeter() {
         //Meter meter = meterService.findById(meterId);
         //TODO: check if meter exist
         //call meter server to get the response
-        WebClient webClient = WebClient.create("http://localhost:8080");
+        WebClient webClient = WebClient.create("http://192.168.1.111:8181"); //10.42.0.2
         return webClient.get().retrieve().bodyToMono(String.class);
     }
     @GetMapping("get/by/userid")

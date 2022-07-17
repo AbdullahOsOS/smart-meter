@@ -5,10 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c3cd1e7-9688-4d96-a6e1-2c5dcac80701" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/root/meter/Requests/UpdateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/root/meter/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/root/meter/api/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/root/meter/api/MeterApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/root/meter/api/MeterApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/root/meter/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/root/meter/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ChargeRequest$Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ChargeRequest$Currency.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ChargeRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ChargeRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EnergyConsumptionView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EnergyConsumptionView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EnergyView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EnergyView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EventDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/EventDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/MeterDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/MeterDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/MonthlyConsumptionDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/MonthlyConsumptionDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/PaymentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/PaymentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/PaymentView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/PaymentView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ReadingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/ReadingDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/DTO/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/Exception/ObjectNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/Exception/ObjectNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/MeterApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/MeterApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/BillAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/BillAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/EventAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/EventAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/MeterApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/MeterApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/MonthlyConsumptionApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/MonthlyConsumptionApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/PaymentAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/PaymentAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/ReadingApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/ReadingApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/api/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/api/UserApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/config/SwaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/controller/BillController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/controller/BillController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/controller/ChargeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/controller/ChargeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/controller/ChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/controller/ChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/controller/CheckoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/controller/CheckoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/enums/Months.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/enums/Months.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Bill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/EventsTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/EventsTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Meter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Meter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/MonthlyConsumption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/MonthlyConsumption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Reading.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Reading.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Reset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/model/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/EventRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/EventRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/MeterRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/MeterRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/MonthlyConsumptionRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/MonthlyConsumptionRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/PaymentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/PaymentRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/ReadingRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/ReadingRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/repo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/repo/UserRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/HMACUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/HMACUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/JWTAuthenticationVerficationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/JWTAuthenticationVerficationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/SecurityConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/SecurityConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/security/WebSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/security/WebSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/EventService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/EventService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/MeterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/MeterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/MonthlyConsumptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/MonthlyConsumptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/ReadingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/ReadingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/StripeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/StripeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/root/meter/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/root/meter/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/root/meter/Hmac.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/root/meter/Hmac.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +108,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -63,7 +123,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MeterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-17.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/corretto-11.0.14.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.root.meter.MeterApplication" />
       <module name="meter" />

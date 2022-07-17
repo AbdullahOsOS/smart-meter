@@ -3,6 +3,7 @@ package com.root.meter.security;
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.root.meter.DTO.UserDTO;
+import com.root.meter.Exception.ObjectNotFoundException;
 import com.root.meter.model.Users;
 import com.root.meter.repo.UserRepo;
 import com.root.meter.service.UserService;
@@ -90,10 +91,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                                     new ArrayList<>()));
                 }
                 else {
-                    Map<String, Object> jsonRes = new HashMap<>();
+                 /*  Map<String, Object> jsonRes = new HashMap<>();
                     jsonRes.put("message", "wrong username or pass");
-                    new ObjectMapper().writeValue(res.getOutputStream(), jsonRes);
+                    new ObjectMapper().writeValue(res.getOutputStream(),jsonRes);
+                */
+                    throw new ObjectNotFoundException("wrong username or pass");
                 }
+
             }
             return null;
 
